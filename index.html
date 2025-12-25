@@ -16,6 +16,40 @@
         rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        /* Circular photo for mobile + desktop */
+        .box__account .image img,
+        .userImg img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+
+        /* Card size and text bigger */
+        .card2 {
+            max-width: 520px; /* thoda aur bada */
+            padding: 30px; /* andar ka space thoda bada */
+            font-size: 1.08rem; /* text thoda bada */
+            line-height: 1.5;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+        }
+
+        .card2 h2 {
+            line-height: 1.6; /* text aur readable */
+        }
+
+        /* Optional responsive tweak */
+        @media (max-width: 480px) {
+            .card2 {
+                max-width: 90%;
+                padding: 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -29,21 +63,21 @@
             <div class="left">
                 <div class="title">
                     <h1 class="happy">
-                        <span style="--t: 2s;">H</span>
-                        <span style="--t: 2.2s;">a</span>
-                        <span style="--t: 2.4s;">p</span>
-                        <span style="--t: 2.6s;">p</span>
-                        <span style="--t: 2.8s;">y</span>
+                        <span style="--t: 1s;">H</span>
+                        <span style="--t: 1.2s;">a</span>
+                        <span style="--t: 1.4s;">p</span>
+                        <span style="--t: 1.6s;">p</span>
+                        <span style="--t: 1.8s;">y</span>
                     </h1>
                     <h1 class="birthday">
-                        <span style="--t: 3s;">B</span>
-                        <span style="--t: 3.2s;">i</span>
-                        <span style="--t: 3.4s;">r</span>
-                        <span style="--t: 3.6s;">t</span>
-                        <span style="--t: 3.8s;">h</span>
-                        <span style="--t: 4s;">d</span>
-                        <span style="--t: 4.2s;">a</span>
-                        <span style="--t: 4.4s;">y</span>
+                        <span style="--t: 1.9s;">B</span>
+                        <span style="--t: 2.1s;">i</span>
+                        <span style="--t: 2.3s;">r</span>
+                        <span style="--t: 2.5s;">t</span>
+                        <span style="--t: 2.7s;">h</span>
+                        <span style="--t: 2.9s;">d</span>
+                        <span style="--t: 3.1s;">a</span>
+                        <span style="--t: 3.3s;">y</span>
                     </h1>
                     <div class="hat">
                         <img src="./images/hat.png" alt="" width="130">
@@ -67,7 +101,7 @@
             <div class="right">
                 <div class="box__account">
                     <div class="image">
-                        <img src="./images/unnamed.png" alt="">
+                        <img src="./images/me.png" alt="Samar">
                     </div>
                     <div class="name">
                         <i class="fa-solid fa-heart"></i>
@@ -83,7 +117,7 @@
             <div class="boxMail-container">
                 <div class="card1">
                     <div class="userImg">
-                        <img src="images/unnamed.png" alt="">
+                        <img src="./images/me.png" alt="Samar">
                     </div>
                     <h4 class="username">To: Saniya 💛<span class="underline"></span></h4>
                     <h3>Happy Birthday</h3>
@@ -128,8 +162,8 @@ Happy Birthday, Chasmish 🐧💫
             } else {
                 clearInterval(timeDatetxt);
             }
-        }, 100);
-    }, 3000);
+        }, 80); // faster speed
+    }, 2000);
 
     let mailBox = document.querySelector('.mail');
     let boxmail = document.querySelector('.boxMail');
